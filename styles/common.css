@@ -1,0 +1,569 @@
+@charset "utf-8";
+/* ===============================================
+▼マスター設定
+=============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap');
+@media only screen and (min-width: 1500px) 
+{
+  html {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) 
+{
+  html 
+  {
+      font-size: 1.8vw
+  }
+  body 
+  {
+    font-size: 1.4rem;
+  }
+}
+  
+@media only screen and (max-width: 768px) 
+{
+  html 
+  {
+      font-size: 2.67vw
+  }
+  body 
+  {
+    font-size: 1.35rem;
+  }
+}
+body {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  box-sizing: border-box;
+  color: #231815;
+  /* 背景色欠け対策 */
+}
+
+/* common font */
+.gothic_font {
+    font-family: 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif;
+}
+
+/*  Montserrat font */
+.monterrat_font {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2.6px;
+}
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* ==============================================
+▼フレーム
+=============================================== */
+
+/* 全体を包括 */
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.sp-block {
+  display: none !important
+}
+.object-fit-img {
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+.main__wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* 共通幅 */
+/* .frame {
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.frame2{
+  padding-left: 100px;
+  padding-right: 100px;
+} */
+
+/* ===============================================
+▼半透明化
+=============================================== */
+/* .over {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.over:hover {
+  opacity: 0.7;
+} */
+/* ===============================================
+▼form設定
+=============================================== */
+
+input, textarea, select {
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin: 0 5px 0 0;
+}
+
+input[type="radio"] {
+  margin: 0 5px 0 0;
+}
+
+/* ===============================================
+▼リスト設定
+=============================================== */
+
+ol.number li {
+  list-style-type: decimal;
+  padding: 0 0 10px 0;
+  margin: 0 0 0 1.5em;
+}
+
+ol.number02 li {
+  list-style-type: cjk-ideographic;
+  padding: 0 0 10px 0;
+  margin: 0 0 0 1.5em;
+}
+
+ul.disc li {
+  list-style-type: disc;
+  padding: 0 0 10px 0;
+  margin: 0 0 0 1.5em;
+}
+
+ul.circle li {
+  list-style-type: circle;
+  padding: 0 0 10px 0;
+  margin: 0 0 0 1.5em;
+}
+
+ol.number li:last-of-type, ol.number02 li:last-of-type, ul.disc li:last-of-type, ul.circle li:last-of-type {
+  padding-bottom: 0;
+}
+
+/* ===============================================
+▼flex設定
+=============================================== */
+
+.flex-disp {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.align-left {
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.align-right {
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.align-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.align-justify {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.align-spaced {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.align-top {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.align-self-top {
+  -ms-flex-item-align: start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.align-bottom {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.align-self-bottom {
+  -ms-flex-item-align: end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.align-middle {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.align-self-middle {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+.align-stretch {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+.align-self-stretch {
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+.align-baseline {
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+
+.align-self-baseline {
+  -ms-flex-item-align: baseline;
+  -ms-grid-row-align: baseline;
+  -webkit-align-self: baseline;
+  align-self: baseline;
+}
+
+.align-content-center-middle {
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.flex-dir-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.flex-dir-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-dir-column-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -moz-box-orient: vertical;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.flex-order-1 {
+  -webkit-box-original-group: 1;
+  -moz-box-original-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
+.flex-order-2 {
+  -webkit-box-original-group: 2;
+  -moz-box-original-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+
+.flex-order-3 {
+  -webkit-box-original-group: 3;
+  -moz-box-original-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+
+.flex-order-4 {
+  -webkit-box-original-group: 4;
+  -moz-box-original-group: 4;
+  -ms-flex-order: 4;
+  -webkit-order: 4;
+  order: 4;
+}
+
+.flex-order-5 {
+  -webkit-box-original-group: 5;
+  -moz-box-original-group: 5;
+  -ms-flex-order: 5;
+  -webkit-order: 5;
+  order: 5;
+}
+
+.flex-order-6 {
+  -webkit-box-original-group: 6;
+  -moz-box-original-group: 6;
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6;
+}
+
+/* ===============================================
+▼リンクスタイル
+=============================================== */
+
+a {
+  color: #231815;
+  text-decoration: none;
+}
+
+a, input, select, textarea, button, *:before, *:after {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -ms-transition: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -ms-transform: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  /* color: #3f7c93;
+  text-decoration: none; */
+}
+
+/* ===============================================
+▼line-height設定
+=============================================== */
+
+.lh_zero, .lh_zero * {
+  line-height: 0;
+  font-size: 0;
+}
+
+.lh_one, .lh_one * {
+  line-height: 1;
+}
+
+/* ===============================================
+▼ボタン
+=============================================== */
+/* .common_button01{
+  border: 2px solid #000;
+  text-align: center;
+}
+.common_button01 a{
+  display: block;
+  padding: 10px 0;
+  color: #000;
+  font-size: 150%;
+  text-transform: uppercase;
+}
+.common_button01:hover{
+  background-color: #000;
+}
+.common_button01:hover a{
+  color: #fff;
+}
+.more_btn_topics:hover span{
+  border-color: #fff;
+}
+.more_btn_topics span{
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 8px;
+  margin-bottom: 3px;
+}
+.more_btn_contacts span img{
+  padding: 9px 0 0 10px;
+} */
+/* ===============================================
+▼タイトルスタイル
+=============================================== */
+/* .common_title01{
+  text-transform: uppercase;
+  font-size: 250%;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  padding:35px 0;
+}
+.common_title02{
+  text-transform: uppercase;
+  font-size: 200%;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  padding: 12.5px 0;
+} */
+
+/* ===============================================
+▼リストitems
+=============================================== */
+/* .list_colume02 .list_items{
+  width: 47%;
+  margin-right: 6%;
+}
+.list_colume03 .list_items{
+  width: 31%;
+  margin-right: 3.5%;
+}
+.list_colume03 .list_items:nth-child(3n){
+  margin-right: 0;
+}
+.list_colume02 .list_items:nth-child(2n){
+  margin-right: 0;
+} */
+
+/* ===============================================
+▼テキストスタイル
+=============================================== */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: #b7b7b7;
+opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b7b7b7;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b7b7b7;
+}
+
+/* .common_text01{
+  font-size: 100%;
+  line-height: 2.0;
+}
+.common_text02{
+  font-size: 125%;
+  line-height: 2.0;
+}
+.common_text03{
+  font-size: 87.5%;
+  line-height: 2.0;
+}
+.txt90{
+  font-size: 90%;
+}
+.txt112{
+  font-size: 112.5%
+}
+.txtB {
+  font-weight: bold;
+}
+.txtC {
+  text-align: center;
+}
+.txtR{
+  text-align: right;
+}
+
+.txtItalic{
+  font-style: italic;
+}
+.bg_wh {
+  background-color: #fff;
+}
+.txt_orange {
+  color: #f87944;
+}
+.pad_top30{
+  padding-top: 30px;
+}
+.pad_top50{
+  padding-top: 50px;
+}
+.pad_bottom20{
+  padding-bottom: 20px;
+}
+.pad_bottom10{
+  padding-bottom: 10px;
+}
+.pad_bottom35{
+  padding-bottom: 35px;
+}
+.pad_bottom50{
+  padding-bottom: 50px;
+}
+.lineHeight2{
+  line-height: 2;
+}
+.imgFull{
+  width: 100%;
+} */
+
+/* 画像スタイル */
+
+.object_fit_img {
+  font-family: "object-fit: cover;";
+}
