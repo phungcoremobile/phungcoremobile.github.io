@@ -1,6 +1,6 @@
 # phungprofile.github.io
 # 環境
-ウェブ： EC-Cube2
+ウェブ： EC-Cube4
 DB: PostgreSQL
 PHP: 5.3.3
 
